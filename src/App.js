@@ -35,7 +35,7 @@ function App() {
         <div className="ToDoBtn">
           <button>Add To Do</button>
         </div>
-        <button onClick={onClick}>ToDo delete❌</button>
+        <button onClick={onClick}>ToDo all delete❌</button>
       </form>
     </div>
   );
