@@ -37,6 +37,13 @@ function App() {
         </div>
         <button onClick={onClick}>ToDo all delete❌</button>
       </form>
+      <hr></hr>
+      <ul>
+        {/* arry에 있는거 추가 */}
+        {toDos.map((toDo, index) => (
+          <li key={index}>{toDo}</li>
+        ))}
+      </ul>
     </div>
   );
 }

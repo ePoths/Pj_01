@@ -4,9 +4,6 @@ body {
   background: #8686;
 }
 
-.container {
-  display: flex;
-}
 .ToDoBtn {
   margin-top: 10px;
 }
