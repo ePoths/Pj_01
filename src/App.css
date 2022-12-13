@@ -1,6 +1,15 @@
+body{
+  padding : 0;
+  margin :0;
+  background : #8686;
+}
+
 .container {
   display: flex;
 }
 .ToDoBtn {
   margin-top: 10px;
+}
+.box{
+  background-color : #000;
 }
