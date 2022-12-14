@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function TestFile() {
+function FnCoin() {
   const [loading, setLoading] = useState(true);
   const [coins, setCoins] = useState([]);
   const [usd, setUsd] = useState(1);
@@ -50,4 +50,4 @@ function TestFile() {
     </div>
   );
 }
-export default TestFile;
+export default FnCoin;
