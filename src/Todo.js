@@ -38,6 +38,7 @@ function App() {
         <div className="ToDoBtn">
           <button>Add To Do</button>
         </div>
+        {/* toDo 삭제 btn */}
         <button onClick={onClick}>ToDo all delete❌</button>
       </form>
       <hr></hr>

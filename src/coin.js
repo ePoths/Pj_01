@@ -16,7 +16,7 @@ function FnCoin() {
   const onChangeBtcValue = (event) => {
     setPrice(event.target.value);
   };
-
+  // 단 한번만 실행함 useEffect((),[])
   useEffect(() => {
     // api내용 불러오기
     fetch("https://api.coinpaprika.com/v1/tickers")
