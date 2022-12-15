@@ -16,7 +16,7 @@ function App() {
     // Push랑 같은 개념
     setToDos((currentArray) => [toDo, ...currentArray]); //매우매우 중요@@@@@@@
 
-    // 다른거임
+    // 함수명 잘봐라
     setToDo("");
   };
   console.log(toDos);
@@ -24,14 +24,17 @@ function App() {
   return (
     <div className="container">
       <form onSubmit={onSubmit}>
+        {/* array 갯수  */}
         <h1>My To Dos ({toDos.length})</h1>
         <input
+          // value 변경 감지
           onChange={onChange}
           value={toDo}
           type="text"
           placeholder="Write your to do..."
         />
         <br></br>
+        {/* btn margin때문에 div테그 */}
         <div className="ToDoBtn">
           <button>Add To Do</button>
         </div>
@@ -39,7 +42,7 @@ function App() {
       </form>
       <hr></hr>
       <ul>
-        {/* arry에 있는거 추가 */}
+        {/* array에 있는거 추가 */}
         {toDos.map((toDo, index) => (
           <li key={index}>{toDo}</li>
         ))}

@@ -6,16 +6,19 @@ function FnCoin() {
   const [usd, setUsd] = useState(1);
   const [price, setPrice] = useState(1);
 
+  // input value를 useState를 통해서 usd에 저장
   const onChangeInPut = (event) => {
     setUsd(event.target.value);
     console.log(usd);
   };
 
+  // 선택한 option의 가격 useState를 통해서 price에 저장
   const onChangeBtcValue = (event) => {
     setPrice(event.target.value);
   };
 
   useEffect(() => {
+    // api내용 불러오기
     fetch("https://api.coinpaprika.com/v1/tickers")
       .then((response) => response.json())
       .then((json) => {
@@ -36,9 +39,14 @@ function FnCoin() {
       ) : (
         <select onChange={onChangeBtcValue}>
           <option>select Coin!</option>
+
           {/* 중요 */}
+          {/* 아래 구문 이해를 돕기위한 영상 링크 */}
+          {/* https://youtu.be/r8ctNYtWCWk */}
           {coins.map((coin, index) => (
             <option key={index} value={coin.quotes.USD.price}>
+              {/* api */}
+              {/* 코인이름 */} {/* 코인 심볼 */} {/* 코인 가격 */}
               {coin.name} ({coin.symbol}) ${coin.quotes.USD.price} USD
             </option>
           ))}
@@ -46,7 +54,7 @@ function FnCoin() {
       )}
       <br></br>
       <input onChange={onChangeInPut} type="text" placeholder="$ "></input>
-      <div>{usd / price}주 구매가능</div>
+      <div>{usd / price} Available for purchase</div>
     </div>
   );
 }
