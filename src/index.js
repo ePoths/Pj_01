@@ -2,11 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./Todo";
 import FnCoin from "./coin";
+import Move from "./move";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
-    <FnCoin />
+    {/* <App /> */}
+    {/* <FnCoin /> */}
+    <Move />
   </React.StrictMode>
 );
