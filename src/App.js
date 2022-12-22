@@ -1,17 +1,12 @@
-/* eslint-disable jsx-a11y/alt-text */
-import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./routes/Home";
-
+import Detail from "./components/Detail";
+import { Route, Routes } from "react-router-dom";
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route path="/">
-          <Home />
-        </Route>
-      </Switch>
-    </Router>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="movie" element={<Detail />} />
+    </Routes>
   );
 }
 
