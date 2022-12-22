@@ -1,15 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./Todo";
-import FnCoin from "./coin";
-import Move from "./move";
-import Movie from "./Movie";
+import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    {/* <App /> */}
-    {/* <FnCoin /> */}
-    <Move />
+    <App />
+    {/* <Coin /> */}
   </React.StrictMode>
 );
